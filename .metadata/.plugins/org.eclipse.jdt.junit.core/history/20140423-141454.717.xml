@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="test" project="EvilHangman" tests="22" started="22" failures="0" errors="0" ignored="0">
+  <testsuite name="EvilHangmanTest" time="2.344">
+    <testcase name="testWin" classname="EvilHangmanTest" time="0.811"/>
+    <testcase name="testGuess" classname="EvilHangmanTest" time="0.245"/>
+    <testcase name="testLoss" classname="EvilHangmanTest" time="0.25"/>
+    <testcase name="testTwoGuesses" classname="EvilHangmanTest" time="0.215"/>
+    <testcase name="testIllegalCharGuess" classname="EvilHangmanTest" time="0.208"/>
+    <testcase name="testMultipleCharGuess" classname="EvilHangmanTest" time="0.205"/>
+    <testcase name="testInitialValues" classname="EvilHangmanTest" time="0.203"/>
+    <testcase name="testSecretWord" classname="EvilHangmanTest" time="0.207"/>
+  </testsuite>
+  <testsuite name="NormalHangmanTest" time="0.006">
+    <testcase name="testCorrectAndIncorrectGuesses" classname="NormalHangmanTest" time="0.001"/>
+    <testcase name="testUpdateStateRepeatedCorrectGuess" classname="NormalHangmanTest" time="0.0"/>
+    <testcase name="testUpdateStateCorrectGuess" classname="NormalHangmanTest" time="0.001"/>
+    <testcase name="testWin" classname="NormalHangmanTest" time="0.001"/>
+    <testcase name="testLoss" classname="NormalHangmanTest" time="0.0"/>
+    <testcase name="testTwoIncorrectGuesses" classname="NormalHangmanTest" time="0.001"/>
+    <testcase name="testIllegalCharGuess" classname="NormalHangmanTest" time="0.0"/>
+    <testcase name="testUpdateStateInCorrectGuess" classname="NormalHangmanTest" time="0.0"/>
+    <testcase name="testCorrectGuess1" classname="NormalHangmanTest" time="0.001"/>
+    <testcase name="testCorrectGuess2" classname="NormalHangmanTest" time="0.0"/>
+    <testcase name="testTwoCorrectGuesses" classname="NormalHangmanTest" time="0.001"/>
+    <testcase name="testMultipleCharGuess" classname="NormalHangmanTest" time="0.0"/>
+    <testcase name="testIncorrectGuess" classname="NormalHangmanTest" time="0.0"/>
+    <testcase name="testInitialValues" classname="NormalHangmanTest" time="0.0"/>
+  </testsuite>
+</testrun>

@@ -8,16 +8,14 @@
  * <p>This class can then be used by a user interface to administer a regular game of Hangman.</p>
  */
 import java.util.*;
-public class NormalHangMan implements HangmanGame
+public class NormalHangMan extends AbstractHungman implements HangmanGame
 {
     
 
-	private String originSecretWord = "";//To store the secret word
-    private int guessesRemaining;//to store the number of guess for the user
-    private int numLettersLeft;//to store the number of the letters in the secret word has not been guessed correctly
-    private String currentState = "";//store the current guessing situation
-    private String history = "";//store the letter user has tried
-    private char guess;//the letter the user guess right now
+	private int numLettersLeft;//to store the number of the letters in the secret word has not been guessed correctly
+    
+    
+    
 
     /**
      * Constructor sets up the game to be played with a word and some number of
@@ -48,18 +46,14 @@ public class NormalHangMan implements HangmanGame
         history = LetterHistory;
     }   
 
-    public String getSecretWord()
-    {
-        return originSecretWord;
-    }
-    public int numGuessesRemaining()
-    {
-        return guessesRemaining;
-    }
+   
+    @Override
     public int numLettersRemaining()
     {
         return numLettersLeft;
     }
+    
+    @Override
     public boolean isWin()
     {
         if (guessesRemaining == 0)
@@ -67,6 +61,8 @@ public class NormalHangMan implements HangmanGame
         else
             return true;
     }
+    
+    @Override
     public boolean gameOver()
     {
         if (guessesRemaining == 0 || numLettersLeft == 0)
@@ -74,14 +70,9 @@ public class NormalHangMan implements HangmanGame
         else
             return false;
     }
-    public String lettersGuessed()
-    {
-        return history;
-    }
-    public String displayGameState()
-    {
-        return currentState;
-    }
+    
+    
+    
     public boolean makeGuess(char ch)
     {
     	if (Character.isLetter(ch) == false) return false;
@@ -138,13 +129,7 @@ public class NormalHangMan implements HangmanGame
     	
     }
     
-    public boolean alreadyGuessed(char c)
-    {
-    	for (int i = 0; i < history.length(); i++) {
-    		if (history.charAt(i) == c) return true;
-    	}
-    	return false;
-    }
+  
     
    
 }

@@ -1,0 +1,57 @@
+
+public abstract class AbstractHungman implements HangmanGame {
+	
+	protected String originSecretWord = "";//To store the secret word
+    protected int guessesRemaining;//to store the number of guess for the user
+    private String currentState = "";//store the current guessing situation
+
+
+	@Override
+	public String getSecretWord() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean makeGuess(char ch) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isWin() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean gameOver() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int numGuessesRemaining() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int numLettersRemaining() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String displayGameState() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String lettersGuessed() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
