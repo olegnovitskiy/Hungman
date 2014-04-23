@@ -1,23 +1,23 @@
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+
 import javax.sound.sampled.*;
 
-public class GUI_Winner implements ActionListener
+public class GUI_Winner extends GUI_GameOver implements ActionListener
 {
-    private JFrame parentFrame;
     private JFrame congratulationsFrame;
     private JLabel answerLabel;
-    private JLabel secretWordLabel;
-    private JLabel gameResultLabel;
-    private JButton returnBtn;
+    
+    
     private ImageIcon background;
     private JPanel imagePanel;
     
     public GUI_Winner(String Letters,JFrame frame)
     {
-        parentFrame = frame;
+        super(Letters, frame);
         congratulationsFrame = new JFrame("You are the winner!!!");
         bg(congratulationsFrame);
         answerLabel = new JLabel("The answer is ");
@@ -26,15 +26,14 @@ public class GUI_Winner implements ActionListener
         secretWordLabel.setFont(new Font("Default",Font.PLAIN,23));
         secretWordLabel.setForeground(Color.red);
         gameResultLabel = new JLabel("You are winner!");
-        returnBtn = new JButton("Return to the main menu");
+       
 
-        returnBtn.addActionListener(this); 
+       
         
         congratulationsFrame.add(answerLabel);
         congratulationsFrame.add(secretWordLabel);
         congratulationsFrame.add(gameResultLabel);
         congratulationsFrame.add(returnBtn);
-
         congratulationsFrame.setVisible(true);
 
     }
@@ -64,7 +63,7 @@ public class GUI_Winner implements ActionListener
     public void actionPerformed(ActionEvent e)
     {
         congratulationsFrame.dispose();
-        parentFrame.dispose();
-    	new Start().createAndShowGUI();
+        super.actionPerformed(e);
+        
     }
 }

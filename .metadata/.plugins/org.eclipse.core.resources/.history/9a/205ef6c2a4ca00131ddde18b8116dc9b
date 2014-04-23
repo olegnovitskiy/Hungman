@@ -1,0 +1,5 @@
+This is the Evil Hangman game written in Java. 
+Unlike regular hangman game, in which the word will not change during the game, 
+Evil hangman will change the word in order to make the word has no letters the user gussed.
+That's why it's hard for users to win in this game.
+

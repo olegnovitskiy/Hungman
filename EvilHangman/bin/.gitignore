@@ -1,9 +1,1 @@
-/EvilHangMan.class
-/EvilHangmanTest.class
-/GUI_Loser.class
-/GUI_PlayGame.class
-/GUI_Winner.class
-/HangmanGame.class
-/NormalHangMan.class
-/NormalHangmanTest.class
-/Start.class
+/GUI_GameOver.class
