@@ -135,6 +135,7 @@ public class NormalHangMan implements HangmanGame
             }
         }
     	return tempB;
+
     	
     }
     

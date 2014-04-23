@@ -172,29 +172,7 @@ public class NormalHangmanTest {
 	
 	@Test
 	public void testUpdateStateCorrectGuess() {
-		// make a correct guess
-		boolean ret = hm.updateState('B');
-		
-		assertTrue(ret);
-		assertTrue("_ _ _ _ _ _ B _ B ".equals(hm.displayGameState()));
-	}
-	
-	@Test
-	public void testUpdateStateInCorrectGuess() {
-		// make an incorrect guess
-		hm.makeGuess('B');
-		boolean ret = hm.updateState('X');
-		
-		assertFalse(ret);
-		assertTrue("_ _ _ _ _ _ B _ B ".equals(hm.displayGameState()));
-	}
-	
-	@Test
-	public void testUpdateStateRepeatedCorrectGuess() {
-		// make an incorrect guess
-		hm.makeGuess('B');
-		hm.makeGuess('X');
-		
+		// use up all guesses and see if game ends
 		boolean ret = hm.updateState('B');
 		
 		assertTrue(ret);

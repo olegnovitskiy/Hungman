@@ -197,7 +197,7 @@ public class NormalHangmanTest {
 		
 		boolean ret = hm.updateState('B');
 		
-		assertTrue(ret);
+		assertFalse(ret);
 		assertTrue("_ _ _ _ _ _ B _ B ".equals(hm.displayGameState()));
 	}
 }

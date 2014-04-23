@@ -107,8 +107,6 @@ public class NormalHangMan implements HangmanGame
     
     public boolean updateState(char ch)
     {
-    	
-    	boolean tempB = true;
     	for (int i = 0; i < originSecretWord.length(); i++)
         {
             if (originSecretWord.charAt(i) == ch)//if the user guess right, adjust the current state.
@@ -134,7 +132,7 @@ public class NormalHangMan implements HangmanGame
                 tempB = false;
             }
         }
-    	return tempB;
+
     	
     }
     

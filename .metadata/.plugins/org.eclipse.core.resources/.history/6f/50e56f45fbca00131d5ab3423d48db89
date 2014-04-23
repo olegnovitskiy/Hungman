@@ -85,31 +85,9 @@ public class NormalHangMan implements HangmanGame
     public boolean makeGuess(char ch)
     {
     	if (Character.isLetter(ch) == false) return false;
-        boolean tempB = updateState(ch);
+        boolean tempB = true;
         guess = ch;
-        
-        if (!alreadyGuessed(ch))
-        {
-            history = history + guess;
-
-            if (tempB)
-            {
-                numLettersLeft--;
-            }
-            else
-            {
-                guessesRemaining--;
-            }
-            return tempB;
-        }
-        else return false;
-    }
-    
-    public boolean updateState(char ch)
-    {
-    	
-    	boolean tempB = true;
-    	for (int i = 0; i < originSecretWord.length(); i++)
+        for (int i = 0; i < originSecretWord.length(); i++)
         {
             if (originSecretWord.charAt(i) == ch)//if the user guess right, adjust the current state.
             {
@@ -134,8 +112,21 @@ public class NormalHangMan implements HangmanGame
                 tempB = false;
             }
         }
-    	return tempB;
-    	
+        if (!alreadyGuessed(ch))
+        {
+            history = history + guess;
+
+            if (tempB)
+            {
+                numLettersLeft--;
+            }
+            else
+            {
+                guessesRemaining--;
+            }
+            return tempB;
+        }
+        else return false;
     }
     
     public boolean alreadyGuessed(char c)
